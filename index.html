@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://img.icons8.com/ios-filled/100/hospital-room.png" alt="Hospital Icon" />
+    <h1>Hospital Management System</h1>
+  </header>
+
+  <div class="container">
+    <!-- Registration/Login -->
+    <div id="auth" class="card">
+      <h2>Register / Login</h2>
+      <img src="https://img.icons8.com/clouds/100/user.png" alt="User" class="icon" />
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <select id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button onclick="register()">Register</button>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- User Panel -->
+    <div id="userPanel" class="card hidden">
+      <h2>User Dashboard</h2>
+      <img src="https://img.icons8.com/fluency/96/doctor-male.png" alt="Doctor Icon" class="icon" />
+      <input type="text" id="appointmentDetails" placeholder="Enter appointment details" />
+      <button onclick="bookAppointment()">Book Appointment</button>
+      <input type="text" id="messageToSend" placeholder="Send message to admin" />
+      <button onclick="sendMessage()">Send Message</button>
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="card hidden">
+      <h2>Admin Dashboard</h2>
+      <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/96/admin-settings.png" alt="Admin Icon" class="icon" />
+      <button onclick="viewAppointments()">View Appointments</button>
+      <button onclick="viewMessages()">View Messages</button>
+      <input type="text" id="doctorName" placeholder="Doctor name" />
+      <button onclick="addDoctor()">Add Doctor</button>
+      <input type="text" id="newAdmin" placeholder="New admin username" />
+      <button onclick="addAdmin()">Add Admin</button>
+      <div id="adminOutput"></div>
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Hospital Management System | NexusLogic Technologies</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
